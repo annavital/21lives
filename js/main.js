@@ -170,7 +170,7 @@ function fisheye() {
     var parent = p.parentNode;
     var sWidth = cWidth / self.size; //sector width
     var background = new Image;
-    var size = 105;
+    var size = 225; //sector width
     var end = 225;
     var val1 = 0;
     var k = 0;
