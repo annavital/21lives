@@ -198,18 +198,17 @@ function fisheye() {
   }
   
   // variables
-  var POST_ID = "post/89097409207/life-surfaced";
   var cWidth; // client width
   var height = 225;
   var theChart = d3.select(".interactive");
-  var chartHTML = theChart.selectAll(".collection .fisheye").datum(function() {
+  var chartHTML = theChart.selectAll(".faceset .fisheye").datum(function() {
     return {
       collectionId : this.getAttribute("data-collection-id"),
       size : +this.getAttribute("data-size")
     };
   });
   var element = chartHTML.insert("a", ".description").attr("href", function(utils) {
-    return "http://anna.vc/" + POST_ID;
+    return "http://anna.vc/";
   }).append("canvas");
   var scale = 1; // big or small
   var scaler = 1;

@@ -33,7 +33,7 @@ body {
 }
 
 body {
-  min-width: 300px;
+  min-width: 240px;
 }
 
 a {
@@ -50,7 +50,7 @@ a:hover {
   padding: 20px 0%;
 /*  background: #222; */
   overflow: hidden;
-  min-width: 300px;
+  min-width: 240px;
 }
 
 .interactive a {
@@ -63,10 +63,10 @@ a:hover {
 }
 
 
-.collection {
+.set {
   position: relative;
   text-align: left;
-  height: 280px;
+  height: 270px;
   font-family: Arial, sans-serif;
   position: relative;
   display: block;
@@ -74,25 +74,25 @@ a:hover {
   padding: 0 0 20px 0;
 }
 
-.collection:last-child {
+.faceset:last-child {
   border-bottom: none;
 }
 
-.collection canvas,
-.collection img {
+.faceset canvas,
+.faceset img {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-.collection img {
+.faceset img {
   background: #555;
   border: solid 1px #444;
   border-top-color: #000;
   border-bottom-color: #555;
 }
 
-.collection .fisheye {
+.faceset .fisheye {
   position: relative;
   height: 250px;
   max-width: 860px;
@@ -103,11 +103,12 @@ a:hover {
 
 @media (max-width: 860px) {
 
-  .collection {
+  .faceset {
     height: inherit;
+    padding-right: 2px;
   }
 
-  .collection .description {
+  .faceset .description {
     position: relative;
     width: inherit;
     margin: 0 0 20px 0;
@@ -133,7 +134,7 @@ body {
 <div class="body">
 
 <div class="interactive">
-    <div class="collection">
+    <div class="faceset">
       <div class="fisheye" data-collection-id="anna-vital" data-size="21"></div>
     </div>
 </div>
