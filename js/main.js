@@ -127,6 +127,12 @@ function fisheye() {
       }
     }
     function initialize() {
+      if (!started){
+        var touchIcon = d3.select(".touch-icon");
+        touchIcon.style("visibility", "hidden")
+        console.log("hiding icon");
+        started = true;
+      }
       right = Math.max(0, Math.min(cWidth - 1E-6, d3.mouse(el)[0]));
       if (last) {
         d3.timer(function() {
@@ -198,6 +204,7 @@ function fisheye() {
   }
   
   // variables
+  var started = false;
   var cWidth; // client width
   var height = 225;
   var theChart = d3.select(".interactive");
