@@ -27,7 +27,6 @@ function fisheye() {
 	
   function resize() {
     cWidth = chartHTML.node().clientWidth;
-    target.style("width", cWidth + "px");
     chartHTML.select("canvas").attr("width", (cWidth + 2) * scaler).style("width", cWidth + 2 + "px").each(function(options) {
       var context = options.context = this.getContext("2d");
       context.scale(scaler, scaler);
@@ -223,12 +222,6 @@ function fisheye() {
     }
   }
   element.attr("height", (height + 3) * scaler).style("height", height + 3 + "px").style("margin-bottom", "-1px");
-  var target = (chartHTML.select(".description"), chartHTML.select(".labels"));
-  target.selectAll("li").datum(function() {
-    return{
-      range : JSON.parse(this.getAttribute("data-range"))
-    };
-  });
   d3.select(window).on("scroll", doEnable).on("resize", resize);
   resize();
 }();
